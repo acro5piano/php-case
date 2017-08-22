@@ -1,0 +1,13 @@
+{
+    "name": "acro5piano/php-case",
+    "description": "Case expression like SQL written in PHP",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "gosho-kazuya",
+            "email": "gosho-kazuya@919.jp"
+        }
+    ],
+    "require": {}
+}
