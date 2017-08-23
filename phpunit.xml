@@ -1,4 +1,12 @@
-<phpunit backupGlobals="true">
+<phpunit backupGlobals="true"
+         backupStaticAttributes="false"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false"
+         syntaxCheck="true">
   <!-- Blacklist the vendor folder -->
   <filter>
     <blacklist>

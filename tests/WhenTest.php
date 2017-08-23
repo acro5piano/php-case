@@ -7,12 +7,20 @@ use PhpCase\Support as C;
 
 class WhenTest extends TestCase
 {
-    public function testCase()
+    public function testFizzBuzz()
     {
         $this->assertEquals('Fizz', $this->getFizzBuzzValue(3));
         $this->assertEquals(1, $this->getFizzBuzzValue(1));
         $this->assertEquals('Buzz', $this->getFizzBuzzValue(5));
         $this->assertEquals('FizzBuzz', $this->getFizzBuzzValue(15));
+    }
+
+    public function testNoElse()
+    {
+        $none = C::case(1, 2, function ($when) {
+            return $when(1, 1)->then('All one');
+        });
+        $this->assertEquals(null, $none);
     }
 
     private function getFizzBuzzValue(int $num)

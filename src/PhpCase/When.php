@@ -20,6 +20,11 @@ class When
         return $this->when(...$pattern);
     }
 
+    public function __toString()
+    {
+        return $this->result;
+    }
+
     public function when(...$pattern)
     {
         $matched = true;
@@ -51,7 +56,7 @@ class When
         return $this->result;
     }
 
-    public function __toString()
+    public function getResult()
     {
         return $this->result;
     }

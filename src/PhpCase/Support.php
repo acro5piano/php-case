@@ -9,7 +9,11 @@ class Support
 {
     public static function case(...$args){
         $callback = array_pop($args);
-        return $callback(new When($args), Constant::WILDCARD);
+        $result = $callback(new When($args), Constant::WILDCARD);
+        if ($result instanceof When) {
+            return $result->getResult();
+        }
+        return $result;
     }
 }
 
