@@ -9,5 +9,10 @@
             "email": "gosho-kazuya@919.jp"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "PhpCase\\": "src/PhpCase/"
+        }
+    }
 }
