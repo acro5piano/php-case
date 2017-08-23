@@ -2,13 +2,15 @@
 
 namespace PhpCase;
 
+use PhpCase\Constant;
+
 class When
 {
     protected $result, $cond, $matched;
 
     public function __construct(array $cond)
     {
-        $this->result = '';
+        $this->result = null;
         $this->matched = false;
         $this->cond = $cond;
     }
@@ -22,7 +24,7 @@ class When
     {
         $matched = true;
         for ($i = 0; $i < count($pattern); ++$i) {
-            if ($pattern[$i] !== '__' && $pattern[$i] !== $this->cond[$i]) {
+            if ($pattern[$i] !== Constant::WILDCARD && $pattern[$i] !== $this->cond[$i]) {
                 $matched = false;
             }
         }
@@ -33,7 +35,7 @@ class When
 
     public function then($value)
     {
-        if ($this->matched && $this->result === '') {
+        if ($this->matched && $this->result === null) {
             $this->result = $value;
         }
 
@@ -42,7 +44,7 @@ class When
 
     public function else($value)
     {
-        if ($this->result === '') {
+        if ($this->result === null) {
             return $value;
         }
 

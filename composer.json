@@ -9,10 +9,13 @@
             "email": "gosho-kazuya@919.jp"
         }
     ],
-    "require": {},
+    "require": {
+        "phpunit/phpunit": "^6.3"
+    },
     "autoload": {
         "psr-4": {
-            "PhpCase\\": "src/PhpCase/"
+            "PhpCase\\": "src/PhpCase/",
+            "Tests\\": "tests"
         }
     }
 }
