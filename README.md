@@ -62,5 +62,6 @@ end
 
 - [x] add constant for wildcard
 - [x] return null when case else not provided
+- [ ] Deploy to composer
 - [ ] add caseLoose() pattern
 - [ ] raise IllegalPatternException when the arguments numbers don't match
